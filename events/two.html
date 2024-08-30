@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <form id = 'rgstforms'>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" id="submit" name="register">
+  </form>
+    <!-- <div id="insert">
+        <div class="key">Press the key and watch magic</div>
+      </div> -->
+    <!-- <h1></h1>
+    <button id = "start">start</button>
+    <button id="stop">Stop</button> -->
+
+</body>
+<script>
+//    let nothing = function(){
+//     console.log('kalyan')
+//    }
+// nothing()
+//    let changeTxt = function(){
+//     document.querySelector('h1').innerHTML = "consistency is the key of success"
+//    }
+// let changeMe = setTimeout(changeTxt(),2000)
+// console.log(changeMe)
+
+// document.querySelector('#stop').addEventListener('click',function(){
+//     // clearTimeout(changeMe)
+//     console.log("stopped")
+// })
+// let setIntervalId
+// document.querySelector("#start").addEventListener('click', function(){
+//   setIntervalId = setInterval(() =>{
+//     document.querySelector('h1').innerHTML += " namaste bhai log"
+
+// },1000)
+// })
+
+// document.querySelector('#stop').addEventListener('click',function(){
+//     clearInterval(setIntervalId)
+// })
+
+
+// window.addEventListener('keydown', (e) => {
+//   insert.innerHTML = `
+//     <div class='color'>
+//     <table>
+//     <tr>
+//       <th>Key</th>
+//       <th>Keycode</th> 
+//       <th>Code</th>
+//     </tr>
+//     <tr>
+//       <td>${e.key === ' ' ? 'Space' : e.key}</td>
+//       <td>${e.keyCode}</td> 
+//       <td>${e.code}</td>
+//     </tr>
+    
+//   </table>
+//     </div>
+//   `;
+// });
+const form = document.querySelector('#rgstforms')
+form.addEventListener('submit',submitHandler)
+// form.addEventListener('reset',resetHandler)
+// form.addEventListener('input',inputHandler)
+// form.addEventListener('change',changeHandler)
+// form.addEventListener('focus',FocusHandler)
+// form.addEventListener('blur',blurHandler)
+
+function submitHandler(e){
+  e.preventDefault()
+  const user = document.querySelector('#username').value
+  const pass = document.querySelector('#password').value
+  const email = document.querySelector('#email').value
+
+  if(user === '' || pass === '' || email === ''){
+    console.error('please fill the input box is empty ')
+    // return
+  }
+  console.log(`username : ${user}`)
+  console.log(`password : ${pass}`)
+  console.log(`EmailId : ${email}`)
+}
+function resetHandler(e){
+console.log('reset form')
+}
+
+function changeHandler(e){
+console.log(`change event on ${e.target.id} `)
+}
+
+function inputHandler(e){
+  console.log(`input event on ${e.target.id} `)
+}
+
+
+function blurHandler(e){
+  console.log(`blur event on ${e.target.id} `)
+}
+
+function focusHandler(e){
+  console.log(`focus event on ${e.target.id} `)
+}
+</script>
+</html>

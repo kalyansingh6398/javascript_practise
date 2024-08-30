@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    let div = document.createElement('div')
+    // console.log(div)
+    div.className = "main"
+    div.id = Math.round(Math.random()*10+1)
+    let node = document.createTextNode("javascript is scripting language")
+    // console.log(node)
+div.appendChild(node)
+document.body.appendChild(div)
+let ul = document.createElement('ul')
+let append = div.appendChild(ul)
+function addLanguage(langname){
+    let list = document.createElement('li')
+    let node = document.createTextNode(langname)
+    list.appendChild(node)
+    document.querySelector('ul').appendChild(list)
+}
+addLanguage("java is future trending language")
+addLanguage("c is base programming language")
+console.log(div)
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+// const list = document.createElement('li')
+// console.log(list)
+// const node = document.createTextNode('java')
+// console.log(node)
+// let append = list.appendChild(node)
+// console.log(append)
+// document.querySelector('.language').appendChild(list)
+function addOptimizeLang(langname){
+    const list = document.createElement('li')
+
+const node = document.createTextNode(langname)
+
+let append = list.appendChild(node)
+
+document.querySelector('.language').appendChild(list)
+}
+addOptimizeLang('c language')
+
+// edit
+
+let li = document.querySelector('li')
+li.outerHTML =' <li>typescript</li>'
+let first = document.querySelector('li:first-child')
+first.remove()
+</script>
